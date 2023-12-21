@@ -1,0 +1,10 @@
+name: LINE Notify
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: snow-actions/line-notify@v1.0.0
+        with:
+          access_token: ${{oBmn1RITlCU3AYWXy6r5f1Mw2rLSUob8UG15XVDCqtg}}
+          message: |
+          My Site is Deploy Sucessfull🥳🥳🥳🥳.
