@@ -17,12 +17,12 @@ jobs:
       # - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{I5wX0uo1T1pISMit8LPe0CndzDXGFJXAaKSveaBvRZB}}'
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTME }}'
           projectId: my-portme
           channelId: live
       - uses: louis70109/line-notify-action@master
         with:
-          token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+          token: ${{I5wX0uo1T1pISMit8LPe0CndzDXGFJXAaKSveaBvRZB}}
           message: ${{github.repository}} Deploy Successfull🥳🥳🥳🥳.
           image_url: 'https://my-portme.web.app/mixProfile.gif'
